@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package connectInit;
+
+import  "consensus.proto";
+
+service testEnv {
+  rpc chat(Message) returns (Message) {}
+  rpc statistic(statMessage) returns (statMessage){}
+}
+
+message statMessage {
+  string type = 1;
+  bytes JSONInfo = 2;
+}
